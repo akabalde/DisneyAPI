@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DisneyAPI.Data;
 using DisneyAPI.Models;
+using Microsoft.AspNetCore.Authorization;
+using DisneyAPI.Auth;
 
 namespace DisneyAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CharacterMoviesController : ControllerBase

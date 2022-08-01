@@ -6,7 +6,7 @@ namespace DisneyAPI.Data
     {
         public static void Initialize(DisneyAPIContext context)
         {
-            // Look for any students.
+            // Look for any characters.
             if (context.Characters.Any())
             {
                 return;   // DB has been seeded
