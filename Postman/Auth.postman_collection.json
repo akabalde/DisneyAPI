@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "654aeec1-1756-4090-b69a-3e07f7470a23",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1364389"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"diego\",\r\n  \"email\": \"diego@example.com\",\r\n  \"password\": \"Password@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/auth/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"diego\",\r\n  \"password\": \"Password@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
