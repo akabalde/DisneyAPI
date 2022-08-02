@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmMTg2YzgzZC1iNTc1LTRkNTEtYmJkYy1kYzYxYWVmMjE1OTQiLCJleHAiOjE2NTkzNTY4MzYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.pPvzl86Z7uWdfVuun4ZNQ2XtBNZT9AwKpj5mzXirbRc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJjNDEzNjZlZi0zNWQxLTQ4MmQtYjZmNy1mZjE5YTMwOTlkZjIiLCJleHAiOjE2NTk0ODA1MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.wcDDow5wgbb-cQ-LpVtv7tS3TthETk32bj-x9x_cEuM",
 							"type": "string"
 						}
 					]
@@ -47,7 +47,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmMTg2YzgzZC1iNTc1LTRkNTEtYmJkYy1kYzYxYWVmMjE1OTQiLCJleHAiOjE2NTkzNTY4MzYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.pPvzl86Z7uWdfVuun4ZNQ2XtBNZT9AwKpj5mzXirbRc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZjliZjM1OS1jYjI2LTQxYjAtOGRhZC00ZDJkODZiNTkwNmQiLCJleHAiOjE2NTk0NzUwOTAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.VbUYU1wsg7tMM_s-zmA0314krMe7LIHC8XG5ZvpNFHw",
 							"type": "string"
 						}
 					]
@@ -68,6 +68,89 @@
 					"path": [
 						"api",
 						"Characters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "characters/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZjliZjM1OS1jYjI2LTQxYjAtOGRhZC00ZDJkODZiNTkwNmQiLCJleHAiOjE2NTk0NzUwOTAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.VbUYU1wsg7tMM_s-zmA0314krMe7LIHC8XG5ZvpNFHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Enzo\",\r\n  \"age\": 50,\r\n  \"weight\": 80,\r\n  \"history\": \"Esta es la historia de Enzo...\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/Characters/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"Characters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "characters/upload/image/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJjNDEzNjZlZi0zNWQxLTQ4MmQtYjZmNy1mZjE5YTMwOTlkZjIiLCJleHAiOjE2NTk0ODA1MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.wcDDow5wgbb-cQ-LpVtv7tS3TthETk32bj-x9x_cEuM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/C:/Users/Diego/Downloads/moviesAPI/encanto.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/Characters/upload/image/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"Characters",
+						"upload",
+						"image",
 						"1"
 					]
 				}
