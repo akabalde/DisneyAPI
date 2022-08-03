@@ -9,8 +9,8 @@ Setup inicial:
 
 Una vez abierto el .sln en Visual Studio, abrir la Package Manager Console (PM>) y ejecutar los siguientes comandos en este orden:
 
-PM> add-migration Initial -Context DisneyAPIContext \
-PM> update-database -Context DisneyAPIContext
+PM> add-migration Initial \
+PM> update-database
 
 Luego de eso ya podemos iniciar y probar nuestro proyecto.
 
