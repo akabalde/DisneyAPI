@@ -14,8 +14,6 @@ ConfigurationManager configuration = builder.Configuration;
 builder.Services.AddDbContext<DisneyAPIContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DisneyAPIContext") ?? throw new InvalidOperationException("Connection string 'DisneyAPIContext' not found.")));
 
-// For Entity Framework (Identity)
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DisneyAPIContext")));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -23,7 +21,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // For Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddEntityFrameworkStores<DisneyAPIContext>()
     .AddDefaultTokenProviders();
 
 // Adding Authentication

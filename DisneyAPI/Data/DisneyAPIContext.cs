@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DisneyAPI.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace DisneyAPI.Data
 {
-    public class DisneyAPIContext : DbContext
+    public class DisneyAPIContext : IdentityDbContext<IdentityUser>
     {
         public DisneyAPIContext (DbContextOptions<DisneyAPIContext> options)
             : base(options)
@@ -27,6 +29,8 @@ namespace DisneyAPI.Data
             modelBuilder.Entity<Movie>().ToTable("Movie");
             modelBuilder.Entity<MovieGenre>().ToTable("MovieGenre");
             modelBuilder.Entity<Genre>().ToTable("Genre");
+
+            base.OnModelCreating(modelBuilder);
         }
         
     }
