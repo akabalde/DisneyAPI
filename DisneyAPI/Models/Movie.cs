@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DisneyAPI.Models
 {
@@ -10,7 +11,8 @@ namespace DisneyAPI.Models
     public class Movie
     {
         public int ID { get; set; }
-        //public string ImagePath { get; set; }
+        [Column(TypeName = "varchar(max)")]
+        public string ImagePath { get; set; }
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
         [DisplayFormat(NullDisplayText = "No rating")]

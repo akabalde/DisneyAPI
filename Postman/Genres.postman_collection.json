@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "fc5b3b94-2590-4f99-9c05-ca0891eb2f94",
+		"name": "Genres",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1364389"
+	},
+	"item": [
+		{
+			"name": "genres",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZDg4NTBhOS0wNjE3LTRkZDMtYWQyMy03NTBkNDY0MjZlYzUiLCJleHAiOjE2NTk0OTg0ODIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.nyqFebTn8hr3OiAqT6qkWZ3E-0QIt0z7v9IzINezjPw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7225/api/genres",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "genres/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZjliZjM1OS1jYjI2LTQxYjAtOGRhZC00ZDJkODZiNTkwNmQiLCJleHAiOjE2NTk0NzUwOTAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.VbUYU1wsg7tMM_s-zmA0314krMe7LIHC8XG5ZvpNFHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/genres/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"genres",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "genres/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZjliZjM1OS1jYjI2LTQxYjAtOGRhZC00ZDJkODZiNTkwNmQiLCJleHAiOjE2NTk0NzUwOTAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.VbUYU1wsg7tMM_s-zmA0314krMe7LIHC8XG5ZvpNFHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Enzo\",\r\n  \"age\": 50,\r\n  \"weight\": 80,\r\n  \"history\": \"Esta es la historia de Enzo...\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/genres/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"genres",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "genres/upload/image/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZDg4NTBhOS0wNjE3LTRkZDMtYWQyMy03NTBkNDY0MjZlYzUiLCJleHAiOjE2NTk0OTg0ODIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.nyqFebTn8hr3OiAqT6qkWZ3E-0QIt0z7v9IzINezjPw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/C:/Users/Diego/Downloads/moviesAPI/lightyear.webp"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/genres/upload/image/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"genres",
+						"upload",
+						"image",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

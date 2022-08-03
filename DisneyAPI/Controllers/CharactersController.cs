@@ -151,7 +151,8 @@ namespace DisneyAPI.Controllers
             }
             catch (Exception)
             {
-                throw;
+                return "Invalid Request";
+                //throw;
             }
 
         }

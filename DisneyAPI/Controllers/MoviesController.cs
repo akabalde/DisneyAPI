@@ -17,10 +17,12 @@ namespace DisneyAPI.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
+        public Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment;
         private readonly DisneyAPIContext _context;
 
-        public MoviesController(DisneyAPIContext context)
+        public MoviesController(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnv, DisneyAPIContext context)
         {
+            hostingEnvironment = hostingEnv;
             _context = context;
         }
 
@@ -106,6 +108,54 @@ namespace DisneyAPI.Controllers
         private bool MovieExists(int id)
         {
             return _context.Movies.Any(e => e.ID == id);
+        }
+
+
+        [HttpPost("upload/image/{id}")]
+        public async Task<string/*IActionResult*/> PostMovieImage(int id)
+        {
+            var movie = await _context.Movies.FindAsync(id);
+
+            if (movie == null)
+            {
+                return "Movie Not Found";
+            }
+
+            try
+            {
+                var files = HttpContext.Request.Form.Files;
+                if (files != null && files.Count > 0)
+                {
+                    foreach (var file in files)
+                    {
+                        FileInfo fi = new FileInfo(file.FileName);
+                        var newFileName = "Image_" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+                        var path = Path.Combine("", hostingEnvironment.ContentRootPath + "\\Images\\" + newFileName);
+
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+
+                        }
+
+                        movie.ImagePath = path;
+                        _context.Entry(movie).State = EntityState.Modified;
+
+                        await _context.SaveChangesAsync();
+                    }
+                    return "Saved Successfully";
+                }
+                else
+                {
+                    return "Select File";
+                }
+            }
+            catch (Exception)
+            {
+                return "Invalid Request";
+                //throw;
+            }
+
         }
     }
 }
