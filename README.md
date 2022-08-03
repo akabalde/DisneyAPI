@@ -14,7 +14,7 @@ PM> update-database
 
 Luego de eso ya podemos iniciar y probar nuestro proyecto.
 
-Se recomienda utilizar Postman para probar request con bearer authentication. En la carpeta Postman de este repositorio se encuentran algunos ejemplos.
+En esta ocasion vamos a utilizar Postman para probar requests con bearer authentication. En la carpeta Postman de este repositorio se encuentran algunos ejemplos.
 
 Subir imagenes:
 
