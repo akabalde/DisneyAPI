@@ -15,3 +15,10 @@ PM> update-database
 Luego de eso ya podemos iniciar y probar nuestro proyecto.
 
 Se recomienda utilizar Postman para probar request con bearer authentication. En la carpeta Postman de este repositorio se encuentran algunos ejemplos.
+
+Subir imagenes:
+
+Debemos colocar en Authorization el bearer token. En Body seleccionar form-data, en key cambiar Text por File y cargar la imagen en value.
+
+![image](https://user-images.githubusercontent.com/38809423/182511766-d95a4ca8-b516-40ba-af60-b674fd30ed38.png)
+
