@@ -157,5 +157,22 @@ namespace DisneyAPI.Controllers
             }
 
         }
+
+        [HttpGet("details/{id}")]
+        public async Task<ActionResult<Movie>> GetMovieDetails(int id)
+        {
+            var movie = await _context.Movies
+                .Include(m => m.CharacterMovies)
+                .ThenInclude(e => e.Character)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
+
+            if (movie == null)
+            {
+                return NotFound();
+            }
+
+            return movie;
+        }
     }
 }
