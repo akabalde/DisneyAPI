@@ -1,43 +1,20 @@
 {
 	"info": {
-		"_postman_id": "c8f56359-068d-4309-8dee-c78ed4ea53af",
-		"name": "Characters",
+		"_postman_id": "eed96bbf-0a0f-4c8b-9aa0-28885a4d6323",
+		"name": "CharacterMovies",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "1364389"
 	},
 	"item": [
 		{
-			"name": "characters",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://localhost:7225/api/Characters",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "7225",
-					"path": [
-						"api",
-						"Characters"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "characters/details/{id}",
+			"name": "charactermovies",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiI1NzAxZTUwMC00YmM4LTRhNDAtOWFhMC0xYTFiNmY4ZGM4MGYiLCJleHAiOjE2NTk2NzQ2NzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.PVg2zVz_qeBPokiH31CjCd0S2a18HMA4vhctnXeFV0c",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiI5NDlkYzg0Ni1jM2MxLTRmODgtODY2ZS1mNzEyODZlYWE2MDIiLCJleHAiOjE2NTk2NTM4NTQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.pfdd4Lhk-XIFTgDg5gO5ThA4ABPrghEgEW8yD6kGXVs",
 							"type": "string"
 						}
 					]
@@ -45,7 +22,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:7225/api/Characters/details/1",
+					"raw": "https://localhost:7225/api/CharacterMovies",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -53,16 +30,14 @@
 					"port": "7225",
 					"path": [
 						"api",
-						"Characters",
-						"details",
-						"1"
+						"CharacterMovies"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "characters/{id}",
+			"name": "charactermovies/{id}",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -84,7 +59,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://localhost:7225/api/Characters/1",
+					"raw": "https://localhost:7225/api/CharacterMovies/1",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -92,7 +67,7 @@
 					"port": "7225",
 					"path": [
 						"api",
-						"Characters",
+						"CharacterMovies",
 						"1"
 					]
 				}
@@ -100,7 +75,7 @@
 			"response": []
 		},
 		{
-			"name": "characters/{id}",
+			"name": "charactermovies/{id}",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -124,7 +99,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:7225/api/Characters/1",
+					"raw": "https://localhost:7225/api/CharacterMovies/1",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -132,50 +107,7 @@
 					"port": "7225",
 					"path": [
 						"api",
-						"Characters",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "characters/upload/image/{id}",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJkMjY2MzNlMi1jNTg0LTRlMDYtOGU5OS1jNDM0ZTU1MDFhMGEiLCJleHAiOjE2NTk1MDI1OTIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.xxYIVQ9AmqvLYeTHm4MWmS0Fpggmk-pY4-e8ZFQm5o0",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "",
-							"type": "file",
-							"src": "/C:/Users/Diego/Downloads/moviesAPI/encanto.jpeg"
-						}
-					]
-				},
-				"url": {
-					"raw": "https://localhost:7225/api/Characters/upload/image/1",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "7225",
-					"path": [
-						"api",
-						"Characters",
-						"upload",
-						"image",
+						"CharacterMovies",
 						"1"
 					]
 				}

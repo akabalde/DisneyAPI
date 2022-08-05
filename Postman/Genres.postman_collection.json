@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZDg4NTBhOS0wNjE3LTRkZDMtYWQyMy03NTBkNDY0MjZlYzUiLCJleHAiOjE2NTk0OTg0ODIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.nyqFebTn8hr3OiAqT6qkWZ3E-0QIt0z7v9IzINezjPw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJkMjY2MzNlMi1jNTg0LTRlMDYtOGU5OS1jNDM0ZTU1MDFhMGEiLCJleHAiOjE2NTk1MDI1OTIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.xxYIVQ9AmqvLYeTHm4MWmS0Fpggmk-pY4-e8ZFQm5o0",
 							"type": "string"
 						}
 					]
@@ -37,7 +37,7 @@
 			"response": []
 		},
 		{
-			"name": "genres/id",
+			"name": "genres/{id}",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -75,7 +75,7 @@
 			"response": []
 		},
 		{
-			"name": "genres/id",
+			"name": "genres/{id}",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -115,14 +115,14 @@
 			"response": []
 		},
 		{
-			"name": "genres/upload/image/id",
+			"name": "genres/upload/image/{id}",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZDg4NTBhOS0wNjE3LTRkZDMtYWQyMy03NTBkNDY0MjZlYzUiLCJleHAiOjE2NTk0OTg0ODIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.nyqFebTn8hr3OiAqT6qkWZ3E-0QIt0z7v9IzINezjPw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJkMjY2MzNlMi1jNTg0LTRlMDYtOGU5OS1jNDM0ZTU1MDFhMGEiLCJleHAiOjE2NTk1MDI1OTIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.xxYIVQ9AmqvLYeTHm4MWmS0Fpggmk-pY4-e8ZFQm5o0",
 							"type": "string"
 						}
 					]
@@ -135,7 +135,7 @@
 						{
 							"key": "",
 							"type": "file",
-							"src": "/C:/Users/Diego/Downloads/moviesAPI/lightyear.webp"
+							"src": "/C:/Users/Diego/Downloads/moviesAPI/thor.jpeg"
 						}
 					]
 				},

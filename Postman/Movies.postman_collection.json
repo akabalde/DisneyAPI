@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZDg4NTBhOS0wNjE3LTRkZDMtYWQyMy03NTBkNDY0MjZlYzUiLCJleHAiOjE2NTk0OTg0ODIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.nyqFebTn8hr3OiAqT6qkWZ3E-0QIt0z7v9IzINezjPw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiIzZDYxNWM5YS0wZjg0LTQ5Y2QtOWNjNS0wZDI0Y2E4OGFmOTQiLCJleHAiOjE2NTk1MDExODksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.igqe-Nd_WEIlCLW78_Up7YRa8dfn7By2z_JZFF-ebUY",
 							"type": "string"
 						}
 					]
@@ -37,7 +37,7 @@
 			"response": []
 		},
 		{
-			"name": "movies/id",
+			"name": "movies/{id}",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -75,7 +75,46 @@
 			"response": []
 		},
 		{
-			"name": "movies/id",
+			"name": "movies/details/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJiZDdjOWEyZi1iOGNiLTQ3NTMtOGQzNi1iZDFjYjBlMmYxNmMiLCJleHAiOjE2NTk2Nzc3NjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.SfFRHAtq8hDMQAIGl7T8_qzJVNEWRVDcnzmnOI64ASo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:7225/api/movies/details/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7225",
+					"path": [
+						"api",
+						"movies",
+						"details",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies/{id}",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -115,14 +154,14 @@
 			"response": []
 		},
 		{
-			"name": "movies/upload/image/id",
+			"name": "movies/upload/image/{id}",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiJmZDg4NTBhOS0wNjE3LTRkZDMtYWQyMy03NTBkNDY0MjZlYzUiLCJleHAiOjE2NTk0OTg0ODIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.nyqFebTn8hr3OiAqT6qkWZ3E-0QIt0z7v9IzINezjPw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJqdGkiOiIzZDYxNWM5YS0wZjg0LTQ5Y2QtOWNjNS0wZDI0Y2E4OGFmOTQiLCJleHAiOjE2NTk1MDExODksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.igqe-Nd_WEIlCLW78_Up7YRa8dfn7By2z_JZFF-ebUY",
 							"type": "string"
 						}
 					]
