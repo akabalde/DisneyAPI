@@ -29,16 +29,22 @@ namespace DisneyAPI.Controllers
         // GET: api/Movies
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovies(
-            [FromQuery] string order)
+            [FromQuery] string order,
+            [FromQuery] string name)
         {
-            if(order == null)
+            if(order == null && name == null)
                 return await _context.Movies.ToListAsync();
 
 
             IQueryable<Movie> moviesIQ = from m in _context.Movies
                                          select m;
 
-            if (order.ToUpper() == "ASC")
+            if (!String.IsNullOrEmpty(name))
+            {
+                moviesIQ = moviesIQ.Where(m => m.Title.Contains(name));
+            }
+
+            else if (order.ToUpper() == "ASC")
                 moviesIQ = moviesIQ.OrderBy(m => m.Title);
 
             else if (order.ToUpper() == "DESC")

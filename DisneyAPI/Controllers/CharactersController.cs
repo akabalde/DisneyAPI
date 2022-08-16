@@ -9,6 +9,7 @@ using DisneyAPI.Data;
 using DisneyAPI.Models;
 using Microsoft.AspNetCore.Authorization;
 using DisneyAPI.Auth;
+using System.Xml.Linq;
 
 namespace DisneyAPI.Controllers
 {
@@ -28,9 +29,21 @@ namespace DisneyAPI.Controllers
 
         // GET: api/Characters
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Character>>> GetCharacters()
+        public async Task<ActionResult<IEnumerable<Character>>> GetCharacters(
+            [FromQuery] string name)
         {
-            return await _context.Characters.ToListAsync();
+            if (name == null)
+                return await _context.Characters.ToListAsync();
+
+            IQueryable<Character> charactersIQ = from c in _context.Characters 
+                                         select c;
+
+            if (!String.IsNullOrEmpty(name))
+            {
+                charactersIQ = charactersIQ.Where(c => c.Name.Contains(name));
+            }
+
+            return await charactersIQ.AsNoTracking().ToListAsync();
         }
 
         // GET: api/Characters/5
