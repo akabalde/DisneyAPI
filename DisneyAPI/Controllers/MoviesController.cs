@@ -28,9 +28,23 @@ namespace DisneyAPI.Controllers
 
         // GET: api/Movies
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies(
+            [FromQuery] string order)
         {
-            return await _context.Movies.ToListAsync();
+            if(order == null)
+                return await _context.Movies.ToListAsync();
+
+
+            IQueryable<Movie> moviesIQ = from m in _context.Movies
+                                         select m;
+
+            if (order.ToUpper() == "ASC")
+                moviesIQ = moviesIQ.OrderBy(m => m.Title);
+
+            else if (order.ToUpper() == "DESC")
+                moviesIQ = moviesIQ.OrderByDescending(m => m.Title);
+
+            return await moviesIQ.AsNoTracking().ToListAsync();
         }
 
         // GET: api/Movies/5
@@ -174,5 +188,6 @@ namespace DisneyAPI.Controllers
 
             return movie;
         }
+       
     }
 }
