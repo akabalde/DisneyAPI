@@ -30,9 +30,10 @@ namespace DisneyAPI.Controllers
         // GET: api/Characters
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Character>>> GetCharacters(
-            [FromQuery] string name)
+            [FromQuery] string name,
+            [FromQuery] int? age)
         {
-            if (name == null)
+            if (name == null && age == null)
                 return await _context.Characters.ToListAsync();
 
             IQueryable<Character> charactersIQ = from c in _context.Characters 
@@ -41,6 +42,11 @@ namespace DisneyAPI.Controllers
             if (!String.IsNullOrEmpty(name))
             {
                 charactersIQ = charactersIQ.Where(c => c.Name.Contains(name));
+            }
+
+            else if (age.HasValue)
+            {
+                charactersIQ = charactersIQ.Where(c => c.Age == age);
             }
 
             return await charactersIQ.AsNoTracking().ToListAsync();
