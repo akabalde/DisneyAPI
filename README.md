@@ -2,7 +2,7 @@
 
 Web API para gestionar personajes de Disney con operaciones CRUD, autenticación con JWT, autorización con filtros y middleware, subida de imágenes y persistencia en BBDD. 
 
-Tecnologías usadas:
+**Tecnologías usadas:**
 
 - .NET 6
 - ASP.NET Web API
@@ -10,12 +10,12 @@ Tecnologías usadas:
 - SQL Server
 - Swagger
 
-Pre-requisitos:
+**Pre-requisitos:**
 - Visual Studio 2022
 - LocalDB:
     Si no esta instalado ejecutar Visual Studio Installer, ir a Modify -> Individual Components, buscarlo en la lupa e instalarlo.
 
-Setup inicial:
+**Setup inicial:**
 
 Una vez abierto el .sln en Visual Studio, abrir la Package Manager Console (PM>) y ejecutar los siguientes comandos en este orden:
 
@@ -26,7 +26,7 @@ Luego de eso ya podemos iniciar y probar nuestro proyecto.
 
 En esta ocasion vamos a utilizar Postman para probar requests con bearer authentication. En la carpeta Postman de este repositorio se encuentran algunos ejemplos.
 
-Subir imagenes:
+**Subir imágenes:**
 
 Debemos colocar en Authorization el bearer token. En Body seleccionar form-data, en key cambiar Text por File y cargar la imagen en value.
 
