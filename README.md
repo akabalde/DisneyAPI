@@ -1,12 +1,13 @@
 # DisneyAPI
 
-Web API para gestionar personajes de Disney, operaciones CRUD, autenticación con JWT, autorización con filtros y middleware, subida de imágenes y persistencia en BBDD. 
+Web API para gestionar personajes de Disney con operaciones CRUD, autenticación con JWT, autorización con filtros y middleware, subida de imágenes y persistencia en BBDD. 
 
 Tecnologías usadas:
 
 - .NET 6
 - ASP.NET Web API
 - EntityFramework Core 6
+- SQL Server
 - Swagger
 
 Pre-requisitos:
