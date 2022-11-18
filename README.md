@@ -1,6 +1,6 @@
 # DisneyAPI
 
-Web API para gestionar personajes y películas de Disney con operaciones CRUD, autenticación con JWT, autorización con filtros y middleware, subida de imágenes y persistencia en BBDD. 
+Web API para gestionar películas y personajes de Disney con operaciones CRUD, autenticación con JWT, autorización con filtros y middleware, subida de imágenes y persistencia en BBDD. 
 
 **Tecnologías usadas:**
 
